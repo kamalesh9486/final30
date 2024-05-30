@@ -1,0 +1,69 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  button#toggleButton {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 40px; /* Make it square */
+    height: 40px; /* Make it square */
+    font-size: 24px; /* Adjust font size for the icon */
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    transition: opacity 0.3s ease; /* Add transition for hiding */
+    border-radius: 50%; /* Make the button circular */
+  }
+  
+  button#toggleButton.hidden {
+    opacity: 0; /* Hide the button */
+    pointer-events: none; /* Disable button interactions */
+  }
+  
+  .dashboard {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    transform: translateX(-100%); /* Hide the dashboard off-screen */
+    transition: transform 0.3s ease;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+  }
+  
+  .dashboard.open {
+    transform: translateX(0); /* Slide in */
+  }
+  
+  .dashboard h2 {
+    margin-top: 0;
+  }
+  
+  .dashboard p {
+    margin-bottom: 20px;
+  }
+  
+  .dashboard-button {
+    display: block;
+    width: 100%; /* Full width of the dashboard */
+    padding: 10px;
+    margin: 0 0 10px 0; /* Remove horizontal margins */
+    background-color: #555;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .dashboard-button:hover {
+    background-color: #777;
+  }
+  
